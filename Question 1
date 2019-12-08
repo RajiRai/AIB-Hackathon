@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import numpy as np 
+
+# Read from the input file
+f = open('/content/drive/My Drive/random_numbers.txt', 'r')
+x = f.readlines()
+z = list(map(str.strip, x))
+z[0]
+x=[float(i) for i in z]
+
+# Create a equation to get the given plot in the question. Equation is y=x cube
+# Generate the new values in variable y
+
+y = [(pow(val, 3)) for val in x] 
+
+
+# Add X and y Label
+plt.xlabel('x axis')
+plt.ylabel('y axis')
+
+plt.grid()
+
+#axis lines for 0,0
+plt.axhline()
+plt.axvline()
+
+plt.plot(x,y)
